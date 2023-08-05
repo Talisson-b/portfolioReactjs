@@ -72,7 +72,7 @@ const sendEmaill = (e) => {
             <a href="https://www.instagram.com/_talissonb/" className="contact__social-link" target='blank'>
               <FaInstagram />
             </a>
-            <a href="https://api.whatsapp.com/send?phone=11930499961&text=Ol%C3%A1%20talisson"
+            <a href="https://api.whatsapp.com/send?phone=+5511930499961&text=Ol%C3%A1%20talisson"
             target='blank'
             className="contact__social-link">
               <FaWhatsapp />
