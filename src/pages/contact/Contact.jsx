@@ -21,10 +21,11 @@ const sendEmaill = (e) => {
   emailjs.sendForm('service_cc9zgwa', 'template_1ezvm5f', form.current, 'vZUYxHcIUNpjPDFKX')
  .then((result) => {
     console.log(result.text)
- })
- .catch((error) => {
-  console.log(error)
- })
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+  form.current.reset()
 }
   
   return (
@@ -83,18 +84,18 @@ const sendEmaill = (e) => {
         <form onSubmit={sendEmaill} ref={form}className='contact__form'>
             <div className="form__input-group">
               <div className="form__input-div">
-                <input type="text" className='form__control' placeholder='Seu Nome' name='to_name' />
+                <input type="text" className='form__control' placeholder='Seu Nome' name='to_name' required />
               </div>
               <div className="form__input-div">
-                <input type="email" className='form__control' placeholder='Seu Email' name='email' />
+                <input type="email" className='form__control' placeholder='Seu Email' name='email' required />
               </div>
               <div className="form__input-div">
-                <input type="text" className='form__control' placeholder='Assunto' name='assunto' />
+                <input type="text" className='form__control' placeholder='Assunto' name='assunto' required/>
               </div>
             </div>
             
             <div className="form__input-div">
-              <textarea placeholder='Sua Mensagem' className="form__control textarea" name='message'></textarea>
+              <textarea placeholder='Sua Mensagem' className="form__control textarea" name='message' required ></textarea>
             </div>
             <button  className='button'>Enviar Mensagem
             <span className='button__icon contact__button-icon'> <FiSend /></span></button>
